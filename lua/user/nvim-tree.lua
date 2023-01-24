@@ -14,18 +14,46 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-  disable_netrw = true,
-  hijack_netrw = true,
+  disable_netrw = false,
+  hijack_netrw = false,
   open_on_setup = false,
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
     "alpha",
   },
+  renderer = {
+    icons = {
+      glyphs = {
+        default = "",
+        symlink = "",
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          untracked = "u",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+      	},
+      },
+    },
+  },
   -- auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
+  hijack_directories = {
+    enable = true,
+    auto_open = true,
+  },
   diagnostics = {
     enable = true,
     icons = {
@@ -72,13 +100,14 @@ nvim_tree.setup {
     dotfiles = false,
     custom = {},
   },
-  --git = {
-  --  enable = true,
-  --  ignore = true,
-  --  timeout = 500,
-  --},
+  git = {
+    enable = false,
+    ignore = true,
+    timeout = 500,
+  },
   view = {
     width = 30,
+    --height = 30,
     hide_root_folder = false,
     side = "left",
     mappings = {
