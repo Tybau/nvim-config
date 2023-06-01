@@ -68,6 +68,7 @@ return packer.startup(function(use)
   use { "kyoz/purify", rtp = "vim" }
   use "projekt0n/github-nvim-theme"
   use "catppuccin/nvim"
+  use "joshdick/onedark.vim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -86,6 +87,9 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+  use "sakhnik/nvim-gdb"
+  use "shirk/vim-gas"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"

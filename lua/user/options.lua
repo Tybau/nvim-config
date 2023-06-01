@@ -53,3 +53,4 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.cmd "set nobackup"
 
+--vim.cmd "let g:loaded_nvimgdb = 1"
