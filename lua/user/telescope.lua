@@ -95,5 +95,7 @@ telescope.setup {
   },
 }
 
+require("telescope").load_extension "file_browser"
+
 vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
 

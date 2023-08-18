@@ -53,4 +53,7 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.cmd "set nobackup"
 
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-y>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
 --vim.cmd "let g:loaded_nvimgdb = 1"
